@@ -21,14 +21,14 @@ pipeline {
         stage('docker image'){
             steps{
              
-                sh 'docker build -t prjimg:${BUILD_NUMBER} -f Dockerfile .'
+                sh 'docker build -t 9894851315/testRepo1:${BUILD_NUMBER} -f Dockerfile .'
                 echo 'docker image is created'
             }
         }
         stage('docker deploy'){
             steps{
-                sh 'docker container rm -f prjcon'
-                sh 'docker run --name prjcon -itd -p 9393:9393 prjimg:${BUILD_NUMBER}'
+                sh 'docker container rm -f testRepo1'
+                sh 'docker run --name testRepo1 -itd -p 9393:9393  9894851315/testRepo1:${BUILD_NUMBER}'
                 echo 'docker container is created'
                 echo 'docker container is running'
             }
