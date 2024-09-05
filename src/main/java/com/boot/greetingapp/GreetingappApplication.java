@@ -24,5 +24,8 @@ public class GreetingappApplication {
 	public String hello() {
 		return "hello from spring boot greeting app";
 	}
-
+@GetMapping("/exit")
+	public String exit() {
+		return "bye from spring boot greeting app";
+	}
 }
