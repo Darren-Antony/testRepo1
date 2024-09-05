@@ -12,17 +12,24 @@ public class GreetingappApplication {
 		SpringApplication.run(GreetingappApplication.class, args);
 	}
 
-	@GetMapping("/welcome")
+	@GetMapping("/home")
 	public String welcome() {
 		return "welcome to spring boot greeting app";
 	}
-	@GetMapping("/greeting")
+	
+	@GetMapping("/javacourse")
 	public String greeting() {
-		return "greetings from spring boot greeting app";
+		return "welcome to java course";
 	}
-	@GetMapping("/hello")
-	public String hello() {
-		return "hello from spring boot greeting app";
+	
+	@GetMapping("/test")
+	public String test() {
+		return "welcome to test page";
 	}
-
+	
+	@GetMapping("/exit")
+	public String bye() {
+		return "Thanks a lot see you again";
+	}
+	
 }
