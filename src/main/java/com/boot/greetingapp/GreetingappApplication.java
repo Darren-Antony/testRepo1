@@ -26,4 +26,8 @@ public class GreetingappApplication {
 	public String test() {
 		return "welcome to test page";
 	}
+	@GetMapping("/exit")
+	public String bye() {
+		return "Thanks a lot see you again";
+	}
 }
